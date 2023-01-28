@@ -7,4 +7,7 @@ const router = express.Router();
 // router.route("/").get(photoController.getAllPhotos);
 
 router.route("/").post(photoController.createPhoto).get(photoController.getAllPhotos);
+
+router.route("/:id").get(photoController.getOnePhoto);
+
 export default router;

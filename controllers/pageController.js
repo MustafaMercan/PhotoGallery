@@ -1,9 +1,27 @@
 const getIndexPage = (req,res) => {
-    res.render("index.ejs");
+    res.render("index.ejs",{
+        link:'index'
+    });
 }
 
 const getAboutPage = (req,res) => {
-    res.render("about.ejs");
+    res.render("about.ejs",{
+        link:'about'
+    });
 }
 
-export {getIndexPage, getAboutPage};
+const getRegisterPage = (req,res) => {
+    res.render("register.ejs",{
+        link:"register"
+    })
+}
+
+const getLoginPage = (req,res) => {
+    res.render("login.ejs",{
+        link:"register"
+    })
+}
+
+
+
+export {getIndexPage, getAboutPage, getRegisterPage, getLoginPage};
